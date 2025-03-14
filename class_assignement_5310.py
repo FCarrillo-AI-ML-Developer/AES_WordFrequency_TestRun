@@ -95,9 +95,6 @@ Original file is located at
 
 """#Libraries"""
 
-!pip install nltk
-!pip install pyspellchecker
-
 import re
 import pandas as pd
 from collections import Counter
