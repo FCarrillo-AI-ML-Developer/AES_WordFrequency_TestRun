@@ -1,9 +1,25 @@
-# Kaggle - The Hewlett Foundation: Automated Essay Scoring
-Dataset found on https://www.kaggle.com/competitions/asap-aes/data
+# Automated Essay Scoring Using Word Frequency Analysis
+Dataset: The Hewlett Foundation - ASAP AES https://www.kaggle.com/competitions/asap-aes/data
 
-Word Frequency Preprocessing Feature Using NLP
+## Overview
+This project explores the correlation between word frequency and essay scores using Natural Language Processing (NLP) techniques. Our analysis is based on the observation that students with higher essay scores (e.g., 12) tend to use a greater number of common words compared to those with lower scores (e.g., 2). The objective is to determine whether word frequency can serve as a predictive feature for automated essay scoring.
 
-Students with low scores, such as a 2, use fewer common words in their essays, while students with a score of 12 use more common words in their essays. Based on this observation, the more common words students write in their essays, the more positive the effect on their essay scores.
-- First identify the frequency of words mentioned in every essay and then identify the common words. Finally count how many common words are in each essay to identify if there is a correlation on the score and the common words.
-- Test Run focuses on a small sample that contains eighteen human scored essays. From the eighteen essays there is three essays for each score: 12, 10, 8, 6, 4, 2.
-- To narrow down the common words text of the essays will be turned to lowercase, any words that start with @___ will be removed, punctuctuation will be removed, white spaces will be removed, and then each word will be turned into a token. In the 8th grade essays there is a lot of mispelling and the rubric does not seem to penalize for mispelling. Hence the tokens will be go through spell cheker to autocorrect any mispellings such as: "wouldnt" to "would not", "havent" to "have not", or "camputer" to "computer". This move will help identify stop words and add group words for frequency. Furthermore, spellchecking before lemmatization will help mispelled words into their rootform. Finally, stop words will be removed as they take away focus from meaniful words and skew results when finding the most frequent words.
+## Methodology
+1. **Word Frequency Analysis:**
+
+Extract word frequency distributions from essays to identify commonly used words.
+Count the occurrences of these common words in each essay to examine potential correlations with assigned scores.
+2. Dataset & Test Sample:
+
+The dataset includes human-scored essays.
+A test sample of 18 essays is used, with three essays representing each score category: 12, 10, 8, 6, 4, and 2.
+Preprocessing Steps:
+
+3. Convert text to lowercase.
+Remove mentions (words starting with @), punctuation, and unnecessary whitespace.
+Tokenize text for further processing.
+Apply spell-checking to correct common misspellings (e.g., "wouldnt" → "would not", "havent" → "have not", "camputer" → "computer"). Since the grading rubric does not penalize spelling errors, this step ensures consistency in word frequency analysis.
+Perform lemmatization after spell correction to group words into their root forms.
+Remove stop words to focus on meaningful content and prevent skewed frequency distributions.
+## Expected Impact
+By refining preprocessing techniques and analyzing word frequency distributions, this project aims to provide insights into how commonly used words influence essay scoring. The findings may contribute to the development of automated scoring models for more efficient and fair grading.
