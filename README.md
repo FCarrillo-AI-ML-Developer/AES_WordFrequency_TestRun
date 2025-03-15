@@ -9,8 +9,8 @@ This project explores the correlation between word frequency and essay scores us
 
 Extract word frequency distributions from essays to identify commonly used words.
 Count the occurrences of these common words in each essay to examine potential correlations with assigned scores.
-2. Dataset & Test Sample:
 
+2. Dataset & Test Sample:
 The dataset includes human-scored essays.
 A test sample of 18 essays is used, with three essays representing each score category: 12, 10, 8, 6, 4, and 2.
 Preprocessing Steps:
